@@ -241,6 +241,10 @@ for (k in 1:nlevels(dd$BAD)) {
 
 ```
 
+library(Information)
+library(InformationValue)
+library(woe)
+
 IV <- create_infotables(data= publicc,bins = 10, y = "BAD")
 IV
 # $Summary
@@ -381,6 +385,3 @@ ggplot(plotFrame, aes(x = Variable, y = IV)) +
 
 # Plotting WoE
 MultiPlot(IV, IV$Summary$Variable[1:14])
-
-
-
